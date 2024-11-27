@@ -1,6 +1,17 @@
+
+rust_library(
+    name = "print_hello",
+    srcs = ["src/lib.rs"],
+    edition = "2021",
+    visibility = ["PUBLIC"],
+)
+
 # https://buck2.build/docs/prelude/globals/#rust_binary
 rust_binary(
     name = "hello_world",
     srcs = ["src/main.rs"],
     crate_root = "src/main.rs",
+    deps = [
+        ":print_hello",
+    ],
 )
