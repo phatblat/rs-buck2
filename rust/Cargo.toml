@@ -4,3 +4,11 @@ version = "0.1.0"
 edition = "2021"
 
 [dependencies]
+
+[[bin]]
+name = "hello_world"
+path = "src/main.rs"
+
+[lib]
+name = "print_hello"
+path = "src/lib.rs"
